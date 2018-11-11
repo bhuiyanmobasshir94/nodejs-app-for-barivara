@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+<a href="/landlord" class="btn btn-primary">Back</a>
+	<a href="/landlord/logOut/<%= user.UserID%>" class="btn btn-danger">LogOut</a>
+	</div>
+</div>
+
+<div class="col-md-2"></div>
+<div class="col-md-8 panel panel-default" style="margin-top: 5%">
+<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">Messages Sent By <%= messageList[0].messageFrom %>  </h2></div>
+<div class="panel-body">
+	<table class="table table-striped">
+		<tr >
+			<th>MESSAGE TO</th>
+			<th>SUBJECT</th>
+			<th>MESSAGE</th>
+
+		</tr>
+			
+
+
+	<% for(var i=0; i<messageList.length; i++){ %>	
+
+		<tr>
+			<td><%= messageList[i].messageTo %></td>
+			<td><%= messageList[i].subject %></td>
+			<td><%= messageList[i].message %></td>
+
+
+			<!--<td><a href="/landlord/inbox/reply/<%= messageList[i].messageFrom %>">Reply</a></td>-->
+			
+
+		</tr>
+		
+		<% } %>
+
+
+
+
+
+	</table>
+	</div>
+</div>
+</body>
+
+
+</html>

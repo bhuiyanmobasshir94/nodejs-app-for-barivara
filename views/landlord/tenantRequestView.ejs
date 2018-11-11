@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+<a href="/landlord" class="btn btn-primary">Back</a>
+	<a href="/landlord/logOut/<%= user.UserID%>" class="btn btn-danger">LogOut</a>
+	</div>
+</div>
+
+<div class="col-md-2"></div>
+<div class="col-md-8 panel panel-default" style="margin-top: 5%">
+<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">Flat Request From Tenant  </h2></div>
+<div class="panel-body">
+	<table class="table table-striped">
+		<tr >
+			<th>User Id </th>
+			<th>Category </th>
+			<th>Number Of Bedroom</th>
+			<th>Number Of Toilet</th>
+			<th>Location</th>
+
+		</tr>
+			
+
+
+	<% for(var i=0; i<tenantRequestList.length; i++){ %>	
+
+		<tr>
+			<td><%= tenantRequestList[i].UserID %></td>
+			<td><%= tenantRequestList[i].category %></td>
+			<td><%= tenantRequestList[i].bedroom %></td>
+			<td><%= tenantRequestList[i].toilet %></td>
+			<td><%= tenantRequestList[i].location %></td>
+
+
+		</tr>
+		
+		<% } %>
+
+
+
+
+
+	</table>
+	</div>
+</div>
+</body>
+
+
+</html>

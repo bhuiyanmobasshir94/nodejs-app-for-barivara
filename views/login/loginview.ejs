@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="jumbotron">
+		<div class="col-md-3"></div>
+		<div class="col-md-6 panel panel-default" style="margin-top: 7%;">
+		<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;"  >Landlord LOGIN</h2></div>
+		<div class="panel-body">
+			<div class="col-md-2"></div>
+	<div class="col-md-8">
+	<form method="post">
+	<div class="form-group">
+	
+			
+				<div class="col-md-12">
+					<div class="col-md-6">
+					User ID
+				
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="UserID" class="form-group">
+				</div>
+				</div>
+			
+
+				<div class="col-md-12">
+					<div class="col-md-6">
+					Password
+				
+				</div>
+				<div class="col-md-6">
+					<input type="password" name="Password" class="form-group">
+				</div>
+				</div>
+				<div style="margin-left: 58%;" class="col-md-12">
+					<input type="submit" value="Login" class="btn btn-info">  <a href="/signup" class="btn btn-primary">Sign Up</a>
+				</div>
+	</form>	
+	</div>
+	
+	
+	<div class="col-md-8">
+	<br/><br/>
+
+	<% errors.forEach(function(err){ %>
+		<li><%= err.msg %></li>
+	<% }) %>
+
+	</div>
+	</div>
+		</div>
+				
+		</div>	
+
+		<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

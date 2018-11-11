@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="jumbotron">
+<div class="col-xs-12">
+	<div class="col-xs-6"></div>
+	<div class="col-xs-6">
+	<a href="/barivaraLogedIn/<%= user.userId %>" class="btn btn-success">Browse Ads</a> 
+	<a href="/cTenant/flatWanted" class="btn btn-success">Flat Wanted</a> 
+	<a href="/cTenant/send" class="btn btn-primary">Send Message</a>  
+	<a href="/cTenant/show" class="btn btn-primary">Inbox (<%= unreadList%>)</a>
+	<a href="/cTenant/sent" class="btn btn-info">Sent</a> 
+	<a href="/cTenant/LogOut/<%= user.userId %>" class="btn btn-danger">LogOut</a>
+	
+	</div>
+</div>
+<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="panel-heading"><h2 style="text-align: center;"  >TENANT PROFILE</h2></div>
+		<div class="panel-heading" style=" margin-top:-30px;"><h3 style="text-align: center;"  >Welcome <text style="color: green;"><%= user.userId %></text></h3></div>
+	<table class="table table-striped">
+		<tr>
+			<th>USER ID</th>
+			<th>FULL Name</th>
+			<th>NATIONAL ID</th>
+			<th>MOBILE NO</th>
+			<th>EMAIL</th>
+			<th>PASSWORD</th>
+			<th>SIGNUP DATE</th>
+			<th>OPTION</th>
+			
+		</tr>
+	
+		<tr>
+			<td><%= tenantList.UserID %></td>
+			<td><%= tenantList.FullName %></td>
+			<td><%= tenantList.NID %></td>
+			<td>0<%= tenantList.Mobile %></td>
+			<td><%= tenantList.Email %></td>
+			<td><%= tenantList.Password %></td>
+			<td><%= tenantList.DateOfSignup %></td>
+			<td><a href="/cTenant/edit/<%= tenantList.UserID %>" class="btn btn-primary">Edit</a> | <a href="/cTenant/delete/<%= tenantList.UserID %>" class="btn btn-danger">Delete</a></td>
+		</tr>
+		
+	</table>
+	</div>
+</body>
+</html>

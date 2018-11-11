@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-11"></div>
+<div class="col-md-1">
+<a href="/cTenant" class="btn btn-primary">Back</a>
+	</div>
+</div>
+<div class="col-md-3"></div>
+<div class="col-md-6 panel panel-default" style="margin-top: 4%">
+	<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">SIGNUP FORM</h2></div>
+	<div class="panel-body">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<form method="post">
+		<div class="form-group">
+		
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Full Name
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="fullName" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					NID
+				</div>
+				<div class="col-md-6">
+					<input type="number" name="nid" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Mobile No
+				</div>
+				<div class="col-md-6">
+					<input type="number" name="mobileNo" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Email
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="email" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Password
+				</div>
+				<div class="col-md-6">
+					<input type="password" name="password" class="form-group"/>
+				</div>
+			</div>
+			<div class="col-md-12" style="margin-left: 77%;">
+				<input type="submit" value="Create" class="btn btn-success" />
+			</div>
+		
+	</form>
+	</div>
+
+<div class="col-md-12">
+	<br/><br/>
+	<% errors.forEach(function(err){ %>
+		<li><%= err.msg %></li>
+	<% }) %>
+	</div>
+	</div>
+
+		
+	</div>
+</div>
+
+</body>
+</html>

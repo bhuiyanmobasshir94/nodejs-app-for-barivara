@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="jumbotron">
+<div class="col-xs-12">
+	<div class="col-xs-10"></div>
+	<div class="col-xs-2">
+	
+	
+	<a href="/viewAdmin" class="btn btn-primary">Back</a> 
+<a href="/logOut"class="btn btn-danger">LOG OUT</a>
+	
+	</div>
+</div>
+<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="panel-heading"><h2 style="text-align: center;"  >LANDLORD LIST</h2></div>
+		<div class="panel-heading" style=" margin-top:-30px;">
+	<table class="table table-striped">
+		<tr>
+			<th>USER ID</th>
+			<th>FULL Name</th>
+			<th>NATIONAL ID</th>
+			<th>MOBILE NO</th>
+			<th>EMAIL</th>
+			<th>PASSWORD</th>
+			<th>SIGNUP DATE</th>
+			<th>Last Seen</th>
+			<th>OPTION</th>
+			
+		</tr>
+			<% for(var i=0; i<landlordList.length; i++){ %>	
+		<tr>
+			<td><%= landlordList[i].UserID %></td>
+			<td><%= landlordList[i].FullName %></td>
+			<td><%= landlordList[i].NID %></td>
+			<td>0<%= landlordList[i].Mobile %></td>
+			<td><%= landlordList[i].Email %></td>
+			<td><%= landlordList[i].Password %></td>
+			<td><%= landlordList[i].DateOfSignup %></td>
+			<td><%= landlordList[i].LastSeen %></td>
+			<td><a href="/deletelandlord/<%=landlordList[i].UserID%>" class="btn btn-danger">Delete</a></td>
+		</tr>
+		
+		<% } %>
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+<a href="/cTenant" class="btn btn-primary">Back</a>
+	<a href="/cTenant/LogOut/<%= user.userId %>" class="btn btn-danger">LogOut</a>
+	</div>
+</div>
+
+<div class="col-md-2"></div>
+<div class="col-md-8 panel panel-default" style="margin-top: 5%">
+<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">TENANT INBOX</h2></div>
+<div class="panel-body">
+	<table class="table table-striped">
+		<tr >
+			<th>MESSAGE TO</th>
+			<th>SUBJECT</th>
+			<th>MESSAGE FROM</th>
+			<th>MESSAGE</th>
+			<th></th>
+
+		</tr>
+			<% for(var i=0; i<messageList.length; i++){ %>	
+
+		<tr <% if(messageList[i].unread==0) {%>
+					style="background-color:rgb(216,239,241); font-style: bold;"
+				<%}%>
+		>
+			<td><%= messageList[i].messageTo %></td>
+			<td><%= messageList[i].subject %></td>
+			<td><%= messageList[i].messageFrom %></td>
+			
+			<form method="post" action="seen">	
+				<input type="hidden" name="mid" value="<%=messageList[i].MID %>">
+				<td><%= messageList[i].message %>
+				<% if(messageList[i].unread==0) {%>
+					<input type="submit" value="read" class="btn btn-success">
+				<%}%>
+				</td>
+				<td><a href="/cTenant/reply/<%= messageList[i].messageFrom %>" class="btn btn-primary">Reply</a></td>
+			</form>
+		</tr>
+		
+		<% } %>
+	</table>
+	</div>
+</div>
+</body>
+</html>

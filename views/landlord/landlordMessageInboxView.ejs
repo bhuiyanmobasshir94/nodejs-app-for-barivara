@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+<a href="/landlord" class="btn btn-primary">Back</a>
+	<a href="/landlord/logOut/<%= messageList[0].messageFrom  %>" class="btn btn-danger">LogOut</a>
+	</div>
+</div>
+
+<div class="col-md-2"></div>
+<div class="col-md-8 panel panel-default" style="margin-top: 5%">
+<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">Messages Received By <%= messageList[0].messageTo %></h2></div>
+<div class="panel-body">
+	<table class="table table-striped">
+		<tr >
+			
+			<th>SUBJECT</th>
+			<th>MESSAGE FROM</th>
+			<th>MESSAGE</th>
+			<th>Reply</th>
+
+		</tr>
+			
+
+
+	<% for(var i=0; i<messageList.length; i++){ %>	
+
+		<tr <% if(messageList[i].unread=="0") {%>
+					style="background-color:rgb(216,239,241);"
+				<%}%>
+		>
+			
+			<td><%= messageList[i].subject %></td>
+			<td><%= messageList[i].messageFrom %></td>
+
+			
+			<form method="post" action="seen">	
+				<input type="hidden" name="mid" value="<%=messageList[i].MID %>">
+				<td><%= messageList[i].message %>
+				<% if(messageList[i].unread=="0") {%>
+					<input type="submit" value="read" class="btn btn-success">
+				<%}%>
+				</td>
+			</form>
+
+			<td><a href="/landlord/inbox/reply/<%= messageList[i].messageFrom %>">Reply</a></td>
+			
+
+		</tr>
+		
+		<% } %>
+
+
+
+
+
+	</table>
+	</div>
+</div>
+</body>
+
+
+</html>

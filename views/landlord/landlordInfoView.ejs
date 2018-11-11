@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="jumbotron">
+<div class="col-xs-12">
+	<div class="col-xs-5"></div>
+	<div class="col-xs-7">
+	<a href="/ad" class="btn btn-success">Ads</a> 
+	<a href="/landlord" class="btn btn-success">Personal Info</a> 
+	<a href="/landlord/tenantRequest" class="btn btn-success">Tenant Request</a> 
+	<a href="/landlord/send" class="btn btn-primary">Send Message</a>  
+	<a href="/landlord/inbox" class="btn btn-primary">Inbox (<%= unreadList%>)</a>
+	<a href="/landlord/sentmessages" class="btn btn-primary">Sent </a>
+	<a href="/landlord/logOut/<%= userList.UserID%>" class="btn btn-danger">LogOut</a>
+	
+	</div>
+</div>
+<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="panel-heading"><h2 style="text-align: center;"  >Landlord Profile</h2></div>
+		<div class="panel-heading" style=" margin-top:-30px;"><h3 style="text-align: center;"  >Welcome <text style="color: green;"><%= userList.UserID %></text></h3></div>
+	<table class="table table-striped">
+		<tr>
+			<th>USER ID</th>
+			<th>FULL NAME</th>
+			<th>NATIONAL ID</th>
+			<th>MOBILE NO</th>
+			<th>EMAIL</th>
+			<th>SIGNUP DATE</th>
+			<th>OPTION</th>
+			
+		</tr>
+
+		
+
+	
+		<tr>
+			<td><%= userList.UserID%></td>
+			<td><%= userList.FullName%></td>
+			<td><%= userList.NID%></td>
+			<td>0<%= userList.Mobile%></td>
+			<td><%= userList.Email%></td>
+			<td><%= userList.DateOfSignup%></td>
+			<td><a href="/landlord/edit" class="btn btn-primary">Edit</a>  <a href="/landlord/delete" class="btn btn-danger">Delete</a></td>
+		</tr>
+		
+	</table>
+	</div>
+</body>
+
+
+</html>

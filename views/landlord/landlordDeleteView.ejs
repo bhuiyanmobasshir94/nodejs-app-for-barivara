@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+<a href="/landlord" class="btn btn-primary">Back</a>
+	<a href="/landlord/logOut/<%= userList.UserID%>" class="btn btn-danger">LogOut</a>
+	</div>
+</div>
+<div class="col-md-3"></div>
+<div class="col-md-6 panel panel-default" style="margin-top:4% ">
+<div class="panel-heading" style="background-color:white;"> <h2 style="text-align: center;">Delete <%= userList.FullName%> ?</h2>
+<div class="panel-body">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+
+	<form method="post">
+	<input type="hidden" name="userId" value = "<%= userList.UserID%>">
+		
+			<div class="col-md-12">
+			<div class="col-md-6">
+				Full Name
+			</div>
+			<div class="col-md-6">
+				<label class="form-group"><%= userList.FullName%></label>
+			</div>
+			</div>
+
+			<div class="col-md-12">
+			<div class="col-md-6">
+				NID
+			</div>
+			<div class="col-md-6">
+				<label class="form-group"><%= userList.NID%></label>
+			</div>
+			</div>
+
+			<div class="col-md-12">
+			<div class="col-md-6">
+				Mobile No
+			</div>
+			<div class="col-md-6">
+				<label class="form-group"><%= userList.Mobile%></label>
+			</div>
+				
+			</div>
+
+			<div class="col-md-12">
+			<div class="col-md-6">
+				Email
+			</div>
+			<div class="col-md-6">
+				<label class="form-group"><%= userList.Email%></label>
+			</div>
+				
+			</div>
+
+			<div class="col-md-12">
+			<div class="col-md-6">
+				Password
+			</div>
+			<div class="col-md-6">
+				<label class="form-group"><%= Password%></label>
+			</div>
+				
+			</div>
+
+			<div class="col-md-12">
+				<label>DO you sure you want to delete!!!</label>
+				<input type="submit" value="DELETE" class="btn btn-danger" />
+			</div>
+		
+	</form>
+	</div>
+</div>
+	
+</div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+</body>
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-11"></div>
+<div class="col-md-1">
+<a href="/landlord/login" class="btn btn-primary">Back</a>
+	</div>
+</div>
+<div class="col-md-3"></div>
+<div class="col-md-6 panel panel-default" style="margin-top: 4%">
+	<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">Landlord Signup Form</h2></div>
+	<div class="panel-body">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<form method="post">
+		<div class="form-group">
+		
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Full Name
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="FullName" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					NID
+				</div>
+				<div class="col-md-6">
+					<input type="number" name="NID" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Mobile No
+				</div>
+				<div class="col-md-6">
+					<input type="number" name="Mobile" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Email
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="Email" class="form-group"/>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					Password
+				</div>
+				<div class="col-md-6">
+					<input type="password" name="Password" class="form-group"/>
+				</div>
+			</div>
+			<div class="col-md-12" style="margin-left: 77%;">
+				<input type="submit" value="Create" class="btn btn-success" />
+			</div>
+		
+	</form>
+	</div>
+
+<div class="col-md-12">
+	<br/><br/>
+	<% errors.forEach(function(err){ %>
+		<li><%= err.msg %></li>
+	<% }) %>
+	</div>
+	</div>
+
+		
+	</div>
+</div>
+
+	<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+</body>
+
+
+
+</html>

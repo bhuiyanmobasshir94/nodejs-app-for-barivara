@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+<a href="/landlord" class="btn btn-primary">Back</a>
+	<a href="/landlord/logOut/<%= messageReplyList.messageFrom%>" class="btn btn-danger">LogOut</a>
+	</div>
+</div>
+
+<div class="col-md-3"></div>
+<div class="col-md-6 panel panel-default" style="margin-top: 5%;">
+<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">Reply message to Tenant</h2></div>
+<div class=" panel-body">
+	<div class="col-md-2"></div>
+	<div class="col-md-6">
+		<form method="post">
+		<div class="form-group">
+		
+
+		<div class="col-md-12">
+		<div class="col-md-6">
+			To
+		</div>
+		<div class="col-md-6">
+			<input type="text" name="messageTo" value="<%= messageReplyList.messageTo%>" class="form-group" />
+		</div>
+		</div>
+
+
+		<div class="col-md-12">
+		<div class="col-md-6">
+			Subject
+		</div>
+		<div class="col-md-6">
+			<input type="text" name="subject" class="form-group"/>
+		</div>
+		</div>
+
+		<div class="col-md-12">
+		<div class="col-md-6">
+			From
+		</div>
+		<div class="col-md-6">
+			<input type="text" name="messageFrom"  value="<%= messageReplyList.messageFrom%>" class="form-group"/>
+		</div>
+		</div>
+
+		<div class="col-md-12">
+		<div class="col-md-6">
+			Message
+		</div>
+		<div class="col-md-6">
+			<textarea name="message" row="5" cols="40"></textarea>
+		</div>
+		</div>
+
+		<div class="col-md-12" style="margin-left: 134%;">
+			<input type="submit" value="send" class="btn btn-success" />
+		</div>
+
+	</form>
+	</div>
+	</div>
+</div>
+
+	
+</div>
+
+	
+</body>
+
+</html>

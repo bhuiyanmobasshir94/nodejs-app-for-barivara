@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="jumbotron">
+<div class="col-xs-12">
+	<div class="col-xs-10"></div>
+	<div class="col-xs-2">
+	
+	
+	<a href="/viewAdmin" class="btn btn-primary">Back</a> 
+<a href="/logOut"class="btn btn-danger">LOG OUT</a>
+	
+	</div>
+</div>
+
+<div class="col-md-12 ">
+				<form method="post" action="/searchtenantname">
+				<div class="col-md-4">
+					<input type="text" name="name"     id="name" placeholder="Search for names...." value="" class="form-group"/>
+				
+			
+			
+				<input type="submit" name="search" value="search" class="btn btn-success" />
+			
+				</div>
+				</form>
+				
+				
+				<form method="post" action="/adminsenttotenant">
+				
+			<div class="col-md-8">
+				<input type="submit" name="show" value="sent messages" class="btn btn-success" />
+				</div>
+				
+				</form>
+				</div>
+			
+<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="panel-heading"><h2 style="text-align: center;"  >TENANT LIST</h2></div>
+		<div class="panel-heading" style=" margin-top:-30px;">
+	<table class="table table-striped">
+		<tr>
+			<th>USER ID</th>
+			<th>FULL Name</th>
+			<th>NATIONAL ID</th>
+			<th>MOBILE NO</th>
+			<th>EMAIL</th>
+			<th>PASSWORD</th>
+			<th>SIGNUP DATE</th>
+			<th>Last Seen</th>
+			<th>OPTION</th>
+			
+		</tr>
+			<% for(var i=0; i<tenantList.length; i++){ %>	
+		<tr>
+			<td><%= tenantList[i].UserID %></td>
+			<td><%= tenantList[i].FullName %></td>
+			<td><%= tenantList[i].NID %></td>
+			<td>0<%= tenantList[i].Mobile %></td>
+			<td><%= tenantList[i].Email %></td>
+			<td><%= tenantList[i].Password %></td>
+			<td><%= tenantList[i].DateOfSignup %></td>
+			<td><%= tenantList[i].LastSeen %></td>
+			<td><a href="/deletetenant/<%= tenantList[i].UserID %>" class="btn btn-danger">Delete</a> |<a href="/sendtenantmessage/<%= tenantList[i].UserID %>" class="btn btn-danger">Send Message</a></td>
+		</tr>
+		
+		<% } %>
+	</table>
+</div>
+</body>
+</html>

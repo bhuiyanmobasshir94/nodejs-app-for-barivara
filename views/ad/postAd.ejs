@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post an Ad</title>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    
+
+
+    <body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+  
+  </div>
+</div>
+<div class="col-md-3"></div>
+<div class="col-md-6 panel panel-default" style="margin-top: -5%">
+<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">Flat Information Form</h2></div>
+  <div class="panel-body">
+    <div class="col-md-2"></div>
+    
+    <form method="post">
+<div class="col-md-9">
+
+   <div class="form-group"> 
+    Rent Type :
+            <input type="radio" name='RentType' value="Apartment" required>Apartment
+            <input type="radio" name='RentType' value="FLat">FLat
+   
+  </div>
+  <div class="form-group" >
+    Bed Room :
+            <input type="number" name='BedRoom' min='1' max='5'  style="width:40px" required>
+            Kitchen:
+            <input type="number" name="Kitchen" min='1' max='2'  style="width:40px" required>
+            Toilet/Bathroom:
+            <input type="number" name='Toilet' min='1' max='5' style="width:40px" required>
+            <br><br>
+            <input type="checkbox" name="SDDR" value='True'>Seperate Drawing & Dining Room
+   </div>
+   <div class="form-group"> 
+     Address:-
+            <br>
+            Road:
+            <input type="text" name="road" size="7" required class="form-control">
+            House:
+            <input type="text" name="house" size="4" required class="form-control">
+            Area: 
+            <select name="area" required class="form-control" >
+                <option value="Khilkhet">Khilkhet</option>
+                <option value="Uttara">Uttara</option>
+                <option value="Banani">Banani</option>
+            </select>
+    </div>
+
+    <div class="form-group">
+        Description:
+            <br>
+            <textarea name="des" id="des" cols="30" rows="5" required class="form-control"></textarea>
+    </div>
+
+
+    <div class="form-group">
+        Select a image:
+            <input type="file" name="img" accept="image/*" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <a href='ad' class="btn btn-primary">Cancel</a> <input type="submit" name='sbtn' value="Post" class="btn btn-primary">  
+    </div>
+
+
+   
+
+   
+  </div>
+</form>
+    </div>
+  </div>
+    
+  </div>
+  <script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

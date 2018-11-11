@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>TENANT LIST</h2>
+	<h3>Welcome <%= user.userId %></h3>
+	<a href="/cTenant/LogOut">LogOut</a></td> | <a href="/cTenant">Back</a>
+	<br/><br/>
+	<table border="1">
+		<tr>
+			<th>USER ID</th>
+			<th>FULL Name</th>
+			<th>NATIONAL ID</th>
+			<th>MOBILE NO</th>
+			<th>EMAIL</th>
+			<th>PASSWORD</th>
+			<th>SIGNUP DATE</th>
+			
+		</tr>
+			<% for(var i=0; i<tenantList.length; i++){ %>	
+		<tr>
+			<td><%= tenantList[i].UserID %></td>
+			<td><%= tenantList[i].FullName %></td>
+			<td><%= tenantList[i].NID %></td>
+			<td>0<%= tenantList[i].Mobile %></td>
+			<td><%= tenantList[i].Email %></td>
+			<td><%= tenantList[i].Password %></td>
+			<td><%= tenantList[i].DateOfSignup %></td>
+		</tr>
+		
+		<% } %>
+	</table>
+</body>
+</html>

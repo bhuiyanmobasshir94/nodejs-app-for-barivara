@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advertise</title>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body class="jumbotron">
+<div class="col-md-12">
+<div class="col-md-10"></div>
+<div class="col-md-2">
+<a href="/landlord" class="btn btn-primary">Back</a>
+	<a href="/landlord/logOut/<%= user.UserID%>" class="btn btn-danger">LogOut</a>
+	</div>
+</div>
+
+<div class="col-md-3"></div>
+<div class="col-md-6 panel panel-default" style="margin-top: 5%;">
+<div class="panel-heading" style="background-color: white;"><h2 style="text-align: center;">ADVIRTISEMENTS</h2></div>
+<div class=" panel-body">
+	<div class="col-md-5"></div>
+	<div class="col-md-3">
+  
+        
+        <a href="/postAd" class="btn btn-primary">Post a New Ad</a>
+            <br><br>
+        <a href="/manageAds/<%= user.UserID%>" class="btn btn-info">Manage Ads</a>
+    
+    	
+	</div>
+	</div>
+</div>
+
+	
+</div>
+
+	
+</body>
+
+
+</html>

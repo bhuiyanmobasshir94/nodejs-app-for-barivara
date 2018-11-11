@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Barivara.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="jumbotron" style="margin-top: -4%;">
+
+<nav class="navbar navbar-inverse" style="background-color: #00756b;height: 20px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/barivara.com" style="color:white;">barivara.com</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>Welcome <%user%> </li>
+    </ul>
+
+
+
+    
+  
+
+    <form class="navbar-form navbar-right" method="post" action="/homesearchlocation">
+
+
+      <div class="input-group">
+    <select style="margin-top: 3%; margin-left: -135%; position:static;" name="renttype">
+      <option value="type">Rent Type</option>
+      <option value="Apartment">Apartment</option>
+      <option value="Flat">Flat</option>
+      <option value="Plot">Plot</option>
+      
+    </select>
+        <input type="text" class="form-control" name="location" placeholder="Search using address...">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  </nav>
+
+<div class="col-md-2"></div>
+<div class="col-md-8 panel panel-default" style="margin-top: 2%">
+    <div class="panel-body">
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+
+        <form style='text-align: center'>
+          <%
+            if(ads.length==0){%> <h2>No Ads for rent yet!</h2> <%}
+            else{ %>
+            <table class="table" style="margin-left:+10%;">
+                <tr>
+                    <th>Ad</th>
+                </tr>
+                <%
+                for(var i = 0; i < ads.length; ++i) { %>
+                    <tr >
+                        <td>
+                        <pre > 
+                        Posted By:<%= ads[i].PostedBy%>  </a>
+                        Rent Type:<%= ads[i].RentType%>
+                        <a href="/ad/details/<%= ads[i].PostedBy %>" style="color:white;" class="btn btn-primary">View Details</a>
+                        
+                        </pre>
+                        </td>
+                    </tr>
+                <% } 
+                }
+                %>
+                
+            </table>
+            
+            
+        </form>
+
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>
+
